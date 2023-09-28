@@ -1,0 +1,45 @@
+---
+layout: page
+permalink: /blog.html
+title: My Blog
+description: I write about cyber threat intelligence
+header-img:  
+last-updated: 2020-10-30 5:55 PM
+---
+
+<!-- Page Content -->
+  {% if site.twitter-widget %}
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+          <div class="col-md-12">
+          {% for post in site.posts %}
+              <div class="blogcard {{post.card}} mb-4 mt-4" style="width: 100%;">
+                <h3><a href="{{ post.url }}" class="nohighlight">{{ post.title }}</a></h3>
+                  <a href="#" class="badge badge-primary" style="background-color: rgba(78, 34, 208, 0.1);color: #4e22d0;">{{post.tag}}</a>  
+                <p>{{post.description}}</p>
+                <p><i>{{post.lead}}</i></p>
+              </div>
+          {% endfor %}
+          </div>
+    </div>
+    <!-- Twitter Side Widget -->
+    <div class="card my-4 shadow border-0">
+        <a class="twitter-timeline" data-height="2300" data-theme="light" href="https://twitter.com/{{ site.twitter }}?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>           
+    </div>
+  </div>
+  {% else %}
+    <!-- Blog Entries Column -->
+      <div class="col-md-12">
+      {% for post in site.posts %}
+          <div class="blogcard {{post.card}} mb-4 mt-4" style="width: 100%;">
+            <h3><a href="{{ post.url }}" class="nohighlight">{{ post.title }}</a></h3>
+              <a href="#" class="badge badge-primary" style="background-color: rgba(78, 34, 208, 0.1);color: #4e22d0;">{{post.tag}}</a>  
+            <p>{{post.description}}</p>
+            <p><i>{{post.lead}}</i></p>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
