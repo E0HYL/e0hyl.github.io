@@ -13,14 +13,14 @@ email:
 description: a minimalistic jekyll theme for academics
 baseurl:                                       # the subpath of your site, e.g. /blog
 url: "https://e0hyl.github.io/yilinghe/"          # the base hostname & protocol for your site, e.g. http://example.com
-image: ./assets/img/icons/myicon.jpg               # used to generate site link preview
+image: /assets/img/icons/myicon.jpg               # used to generate site link preview
 image_alt: A minimalistic jekyll theme for academic    # image description
 
 # =======================================#
 # -----------SITE SETTINGS---------------#
 #========================================#: 
 author: E0
-profile_image: ./assets/img/avatar/photo.jpg #/assets/img/avatar/avatar.jpeg 
+profile_image: /assets/img/avatar/photo.jpg #/assets/img/avatar/avatar.jpeg 
 occupation: Ph.D. candidate
 snippet:
 twitter: 
