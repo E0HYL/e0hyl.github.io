@@ -10,4 +10,4 @@ date: 2020-11-20
 - 💬 Visit my previous blog at https://e0hyl.github.io/BLOG-OF-E0/.
 - 📫 How to reach me: yilinghe@zju.edu.cn
 
-<a href="/contact.html" class="highlighted">Contact Me</a>
+<a href="./contact.html" class="highlighted">Contact Me</a>
