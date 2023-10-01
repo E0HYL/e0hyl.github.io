@@ -11,7 +11,13 @@
     {% if site.github %}
         <a href="https://github.com/{{ site.github }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-github-square fa-lg"></i></a>
+            <i class="fab fa-github-square fa-lg"></i> <small class="text-muted">Github</small> </a>
+        </span>
+    {% endif %}
+    {% if site.gscholar %}
+        <a href="https://scholar.google.com/citations?user={{ site.gscholar }}">
+        <span style="color: {{ theme.social-color }};">
+            <i class="fas fa-graduation-cap fa-lg"></i> <small class="text-muted">Google scholar</small> </a>
         </span>
     {% endif %}
     {% if site.linkedin %}
@@ -35,13 +41,13 @@
     {% if site.medium %}
         <a href="https://medium.com/@{{ site.medium }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-medium fa-lg"></i></a>
+            <i class="fab fa-medium fa-lg"></i> <small class="text-muted">Medium</small> </a>
         </span>
     {% endif %}
     {% if site.keybase %}
         <a href="https://keybase.io/{{ site.keybase }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-keybase"></i></a>
+            <i class="fab fa-keybase"></i> <small class="text-muted">Keybase</small> </a>
         </span>
     {% endif %} 
     <i> &nbsp;&nbsp; </i>
