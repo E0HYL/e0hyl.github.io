@@ -8,7 +8,7 @@
 # -----------BASE SETTINGS---------------#
 #========================================#
 
-title: Dumbarton 
+title: Yiling He
 email: 
 description: a minimalistic jekyll theme for academics
 baseurl:                                       # the subpath of your site, e.g. /blog
@@ -19,19 +19,19 @@ image_alt: A minimalistic jekyll theme for academic    # image description
 # =======================================#
 # -----------SITE SETTINGS---------------#
 #========================================#: 
-author: John Doe 
-profile_image: /assets/img/avatar/cropped.png #/assets/img/avatar/avatar.jpeg 
-occupation: 
+author: E0
+profile_image: /assets/img/avatar/photo.jpg #/assets/img/avatar/avatar.jpeg 
+occupation: Ph.D. candidate
 snippet:
-twitter: tbutler0x90
-github: tcbutler320
-linkedin: tyler-b-a700a1aa
-stackoverflow: '12935605'
+twitter: 
+github: E0HYL
+linkedin: 
+stackoverflow: 
 website: https://tbutler.org
 codepen: 
-medium: 
-email: developer.tbutler@gmail.com
-keybase: tbutler320
+medium: ImE0
+email: heyilinge0@gmail.com
+keybase: yiling97
 pgp: 
 ctftime: 
 phonenumber: 
@@ -116,7 +116,8 @@ exclude:
 # -----JEKYLL SCHOLAR SETTINGS-----------#
 #========================================#
 scholar:
-  last_name: Dumbarton
+  first_name: Yiling
+  last_name: He
   style: apa
   locale: en
   source: /_bibliography/

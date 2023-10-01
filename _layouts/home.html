@@ -1,5 +1,6 @@
 ---
 layout: default
+abstract: false
 ---
 {% assign theme = site.data.themes[site.ui_theme] %}
 
@@ -24,7 +25,7 @@ layout: default
 <!-- ABOUT ME SECTION -->
 <div class="card mx-auto border-0" style="position:relative;background-color:{{theme.home-background-color}};">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       {% if site.animate %}
         <img src="{{ site.profile_image }}" class="img-thumbnail float-left animate__animated animate__fadeInLeft shadow bg-white rounded" alt="...">
       {% else %}
@@ -32,16 +33,16 @@ layout: default
       {% endif %}
     </div>
     <!-- EDUCATION SECTION -->
-    <div class="col-md-8">
+    <div class="col-md-9">
       {% if site.animate %}
-      <div class="card-body animate__animated animate__fadeInRight" style="color:{{theme.education-font-color}};">
+      <div class="card-body animate__animated animate__fadeInRight" style="color:{{theme.education-font-color}};margin-top:-0.8rem">
       {% else %}
       <div class="card-body mt-0" style="color:{{theme.education-font-color}};">
       {% endif %}
         <p style="color:{{theme.education-font-color}};">{{ content | markdownify}}<p>
-        {% if site.home_option == "education" %}
+        <!-- {% if site.home_option == "education" %}
           {% include education.html %}
-        {% endif %}
+        {% endif %} -->
       </div>
     </div>
   </div>

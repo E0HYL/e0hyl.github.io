@@ -1,6 +1,6 @@
 - name: Publications
   id: publications
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Follow my recent publications here.
   url: publications.html
   first: true
   
