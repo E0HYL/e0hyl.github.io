@@ -12,8 +12,8 @@ title: Yiling He
 email: 
 description: a minimalistic jekyll theme for academics
 baseurl:                                       # the subpath of your site, e.g. /blog
-url: "https://dumbarton.netlify.app/"          # the base hostname & protocol for your site, e.g. http://example.com
-image: /assets/img/dumbarton.png               # used to generate site link preview
+url: "https://e0hyl.github.io/yilinghe/"          # the base hostname & protocol for your site, e.g. http://example.com
+image: /assets/img/icons/myicon.jpg               # used to generate site link preview
 image_alt: A minimalistic jekyll theme for academic    # image description
 
 # =======================================#
@@ -27,7 +27,7 @@ twitter:
 github: E0HYL
 linkedin: 
 stackoverflow: 
-website: https://tbutler.org
+website: 
 codepen: 
 medium: ImE0
 email: heyilinge0@gmail.com
