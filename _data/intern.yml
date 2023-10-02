@@ -1,0 +1,8 @@
+- Company: Tencent 
+  Department: Xuanwu (Security) Lab
+  StartDate: March, 2021
+  EndDate: August, 2021
+  title: "BrutePrint: Expose Smartphone Fingerprint Authentication to Brute-force Attack"
+  pdf: https://arxiv.org/pdf/2305.10791.pdf
+  issues: https://github.com/E0HYL/BrutePrint
+  

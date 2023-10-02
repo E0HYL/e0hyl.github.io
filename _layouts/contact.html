@@ -16,7 +16,7 @@ last-updated: 2020-10-30 5:55 PM
     <!-- Trigger -->
     <button class="btn" data-clipboard-target="#foo">
         <i class="far fa-copy" alt="Copy PGP clipboard"></i>
-        <span style="font-size:14px;">Copy</span>
+        <span style="font-size:14px;">Select to Copy</span>
     </button>
     {% endif %}
   </div>
@@ -24,9 +24,28 @@ last-updated: 2020-10-30 5:55 PM
 
 <div class="card shadow">
   <div class="container">
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact">
       <div class="mb-3 mt-5">
         <input type="name" placeholder="Your Name" name="name" class="form-control" id="inputForName"/>
+      </div>
+      <div class="mb-3">
+        <input type="text" placeholder="Institution" name="institution" class="form-control" id="inputForInstitution"/>
+      </div>
+      <div class="mb-3">
+        <input type="text" placeholder="Position" name="position" class="form-control" id="inputForPosition"/>
+      </div>
+      <div class="mb-3">
+        <input type="text" placeholder="Personal Page" name="position" class="form-control" id="inputForWebpage"/>
+      </div>
+      <div class="mb-3">
+      <div class="mb-3">
+        <select name="subject" class="form-control" id="inputForSubject">
+          <option value="Q-paper">Q-paper</option>
+          <option value="Q-code">Q-code</option>
+          <option value="Q-team">Q-team</option>
+          <option value="Collabration">Collabration</option>
+          <option value="Others">Others</option>
+        </select>
       </div>
       <div class="mb-3">
         <textarea type="message" placeholder="Your Message" name="message" class="form-control" id="inputforMessage"></textarea>
@@ -34,17 +53,61 @@ last-updated: 2020-10-30 5:55 PM
       <div class="mb-3">
         <input type="email" placeholder="Your Email" name="email" class="form-control" id="inputforEmail">
       </div>
-      <button type="submit" class="btn mb-4" style="background-color:{{theme.default-button-color}};">Submit</button>
+      <button type="button" class="btn mb-4" style="background-color:{{theme.default-button-color}};" onclick="generateAndOpenEmail();">Email Me</button>
     </form>
+
+    <div class="mb-3 mt-4" id="generatedTextContainer" style="display: none;">
+      <label for="generatedEmailText"><em>Generated Email Text:</em></label>
+      <textarea id="generatedEmailText" class="form-control" rows="7" style="background-color:{{theme.default-button-color}};" readonly></textarea>
+      <button class="btn mt-2" data-toggle="tooltip" title="Email text copied!" onclick="copyToClipboard();">
+        <i class="far fa-copy" alt="Copy Email clipboard"></i>
+        <span style="font-size:14px;">Copy</span>
+      </button>
   </div>
 </div>
-
-
-
+</div>
 
 <script>
 function startClippy(){
     new ClipboardJS('.btn');
 }
 window.onload = startClippy;
+
+function generateAndOpenEmail() {
+  var name = document.getElementById("inputForName").value;
+  var institution = document.getElementById("inputForInstitution").value;
+  var position = document.getElementById("inputForPosition").value;
+  var webpage = document.getElementById("inputForWebpage").value;
+  var email = document.getElementById("inputforEmail").value;
+  var message = document.getElementById("inputforMessage").value;
+  var subjectOption = document.getElementById("inputForSubject").value;
+
+  var subject = subjectOption + ": " + name + ", " + position + "from " + institution;
+  var body = "Name: " + name + "\n" +
+             "Webpage: " + webpage + "\n" +
+             "Email: " + email + "\n\n" +
+             "Message:\n" + message;
+
+  // Update the generated email text area
+  var generatedText = "Subject: " + subject + "\n\n" + body;
+  document.getElementById("generatedEmailText").value = generatedText;
+
+  // Show the generated text container
+  document.getElementById("generatedTextContainer").style.display = "block";
+
+  // Open default email client with filled-in data
+  window.location.href = "mailto:yourEmail@example.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+}
+
+function copyToClipboard() {
+    var copyText = document.getElementById("generatedEmailText");
+    copyText.select();
+    document.execCommand("copy");
+
+    // Show the tooltip indicating the text was copied
+    $('[data-toggle="tooltip"]').tooltip('show');
+    setTimeout(function() {
+        $('[data-toggle="tooltip"]').tooltip('hide');
+    }, 2000);
+}
 </script>

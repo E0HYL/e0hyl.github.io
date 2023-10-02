@@ -1,6 +1,33 @@
 - School: Zhejiang University
-  Degree: Full-time Doctor candidate
-  Program: College of Computer Science
-  Start Date: September 11, 2021
-  End Date: Jun 30, 2024
+  Degree: Phd candidate
+  Program: Cyberspace Security
+  Department: College of Computer Science
+  StartDate: September, 2021
+  EndDate: June, 2024
   Icon: /assets/img/icons/2x/zju.png      # Make this icon small, think 30px/30px
+  Awards:
+    - ZJU Outstanding Graduate Student (2021~2022)
+    - Higgs University Student Extracurricular Innovation Scholarship (2021)
+
+- School: Zhejiang University
+  Degree: Master's (transferred to PhD in the spring semester)
+  Program: Cyberspace Security
+  Department: College of Computer Science
+  StartDate: September, 2019
+  EndDate: June, 2021
+  Icon: /assets/img/icons/2x/zju.png
+  Awards: 
+    - ZJU Outstanding Graduate Student (2019)
+
+- School: Beijing University of Posts and Telecommunications
+  Degree: Bachelor degree
+  Program: Information Security
+  Department: School of Cyberspace Security
+  StartDate: September, 2015
+  EndDate: June, 2019
+  Icon: 
+  Awards:
+    - Beijing Outstanding Graduation Design (2019)
+    - First prize in National College Student Information Security Contest (2018)
+    - National Scholarship (2018)
+    - Rui'an Tech Scholarship (2017)
