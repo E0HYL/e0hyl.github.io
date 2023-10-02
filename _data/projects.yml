@@ -1,47 +1,51 @@
-- name: Project 1
+- name: FINER-explain
   id: project1
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    The framework to fine-tune existing malware/vulnerability classifiers with explanations and generate component-based explanations with feature attribution XAI methods, improving explanation fidelity and intelligibility. Refer to our CCS 2023 paper for more details. 
   date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
+  link: https://github.com/E0HYL/FINER-explain
+  image:  ./assets/img/icons/projects/01.png
   tech: 
-    - python
+    - tensorflow
+    - lime
+    - shap
+  blog: 
+    - "[LIME & SHAP Toolkit](https://e0hyl.github.io/BLOG-OF-E0/LIMEandSHAP/)"
+    - "[GradientExplainer](https://e0hyl.github.io/BLOG-OF-E0/GradientExplainer/)"
 
-
-- name: Project 2
+- name: MsDroid
   id: project2
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+    Represent android malware with a set of graphs, classify them with GNN, and explain the decisions with techniques including GNN-Explainer. Refer to our TDSC 2023 paper for more details.   
   date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
+  link: https://github.com/E0HYL/MsDroid
+  image: ./assets/img/icons/projects/02.png
   tech: 
-    - c++
+    - pytorch
+    - pytorch-geometric
+  blog: 
+    - "[GNN Basis](https://e0hyl.github.io/BLOG-OF-E0/GNNBasic/)"
+    - "[PyG Dataset](https://e0hyl.github.io/BLOG-OF-E0/PyGeometric_Data/)"
+    - "[GNNExplainer](https://e0hyl.github.io/BLOG-OF-E0/GNNExplainer/)"
 
-- name: Project 3
+- name: AndrozooDownloader
   id: project3
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+    Download datasets from Androzoo, differentiate by year as well as benign/malicious applications. Supports coroutines, proxies, breakpoint continuation, error retries, etc.   
   date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
+  link: https://github.com/E0HYL/AndrozooDownloader
+  image:  ./assets/img/icons/projects/03.png
   tech: 
-    - Java
-    - Maven
-    - Jenkins
+    - python
+    - asyncio
 
-- name: Project 4
+- name: AI4Code-Framework
   id: project4
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 0
+    This repo is no longer maintained but the Android malware feature extraction methods in related papers, i.e., Drebin, DAMD, MaMaDroid, Hindroid, and MsDroid, are ready to be used, which I re-implemented with androguard v3.4.
   date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
+  link: https://github.com/E0HYL/AI4Code-Framework
+  image: ./assets/img/icons/projects/04.png
   tech: 
-    - Sonarcube
-    - Java
+    - python
+    - androguard

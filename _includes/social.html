@@ -1,54 +1,94 @@
 {% assign theme = site.data.themes[site.ui_theme] %}
 <!-- Displays Social Media Icons based on _config.yml settings -->
 <span style="color:{{ theme.social-color }};">
-    <i> &nbsp;&nbsp; </i>
-    {% if site.twitter %}
-        <a class="social-link" href="https://twitter.com/{{ site.twitter }}">
-        <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-twitter-square fa-lg"></i></a>
-        </span>
-    {% endif %}
+    <!-- <i> &nbsp;&nbsp; </i> -->
     {% if site.github %}
         <a href="https://github.com/{{ site.github }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-github-square fa-lg"></i> <small class="text-muted">Github</small> </a>
+            <i class="fab fa-github-square fa-lg"></i> 
+            <small class="text-muted conditional-text">Github </small> 
         </span>
+        </a>
     {% endif %}
     {% if site.gscholar %}
         <a href="https://scholar.google.com/citations?user={{ site.gscholar }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fas fa-graduation-cap fa-lg"></i> <small class="text-muted">Google scholar</small> </a>
+            <i class="fas fa-graduation-cap fa-lg"></i> 
+            <small class="text-muted conditional-text">Scholar </small> 
         </span>
+        </a>
+    {% endif %}
+    {% if site.orcid %}
+        <a href="https://orcid.org/{{ site.orcid}}">
+        <span style="color: {{ theme.social-color }};">
+            <i class="fab fa-orcid fa-lg"></i> 
+            <small class="text-muted conditional-text">ORCID </small> 
+        </span>
+        </a>
     {% endif %}
     {% if site.linkedin %}
         <a href="https://www.linkedin.com/in/{{ site.linkedin }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-linkedin fa-lg"></i></a>
+            <i class="fab fa-linkedin fa-lg"></i>
+            <small class="text-muted conditional-text">Linkedin </small> 
         </span>
+        </a>
+    {% endif %}
+    {% if site.researchgate %}
+        <a href="https://www.researchgate.net/profile/{{site.researchgate}}">
+        <span style="color: {{ theme.social-color }};">
+            <i class="fab fa-researchgate fa-lg"></i>
+            <small class="text-muted conditional-text">Researchgate </small> 
+        </span>
+        </a>
     {% endif %}
     {% if site.codepen %}
         <a href="https://codepen.io/{{ site.codepen }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-codepen fa-lg"></i></a>
+            <i class="fab fa-codepen fa-lg"></i>
+            <small class="text-muted conditional-text">Codepen </small> 
         </span>
+        </a>
     {% endif %}
     {% if site.stackoverflow %}
         <a href="https://stackoverflow.com/users/story/{{ site.stackoverflow }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-stack-overflow fa-lg"></i></a>
+            <i class="fab fa-stack-overflow fa-lg"></i>
+            <small class="text-muted conditional-text">Stackoverflow </small> 
         </span>
+        </a>
+    {% endif %}
+    {% if site.bitbucket %}
+        <a href="https://stackoverflow.com/users/story/{{ site.stackoverflow }}">
+        <span style="color: {{ theme.social-color }};">
+            <i class="fab fa-bitbucket fa-lg"></i>
+            <small class="text-muted conditional-text">Bitbucket </small> 
+        </span>
+        </a>
     {% endif %}
     {% if site.medium %}
         <a href="https://medium.com/@{{ site.medium }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-medium fa-lg"></i> <small class="text-muted">Medium</small> </a>
+            <i class="fab fa-medium fa-lg"></i> 
+            <small class="text-muted conditional-text">Medium </small> 
         </span>
+        </a>
+    {% endif %}
+    {% if site.twitter %}
+        <a class="social-link" href="https://twitter.com/{{ site.twitter }}">
+        <span style="color: {{ theme.social-color }};">
+            <i class="fab fa-twitter-square fa-lg"></i>
+            <small class="text-muted conditional-text">Twitter </small> 
+        </span>
+        </a>
     {% endif %}
     {% if site.keybase %}
         <a href="https://keybase.io/{{ site.keybase }}">
         <span style="color: {{ theme.social-color }};">
-            <i class="fab fa-keybase"></i> <small class="text-muted">Keybase</small> </a>
+            <i class="fab fa-keybase fa-lg"></i> 
+            <small class="text-muted conditional-text">Keybase </small> 
         </span>
+        </a>
     {% endif %} 
     <i> &nbsp;&nbsp; </i>
 </span>

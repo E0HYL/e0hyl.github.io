@@ -19,7 +19,7 @@
 
 - name: Projects
   id: projects
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Selected projects from my Github, visit more at https://github.com/E0HYL.
   content: 
   url: projects.html
   first: false

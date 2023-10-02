@@ -578,22 +578,27 @@ right: 15px;
 max-height: 120px;
 }
 
+
+/* url(https://ionicframework.com/img/getting-started/ionic-native-card.png)
+    url(https://ionicframework.com/img/getting-started/components-card.png)
+    url(https://ionicframework.com/img/getting-started/theming-card.png)
+*/
 .card-1{
-background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+background-image: url(../assets/img/icons/ionic-native-card.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-2{
- background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+ background-image: url(../assets/img/icons/components-card.png);
     background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-3{
- background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+ background-image: url(../assets/img/icons/theming-card.png);
     background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
@@ -691,4 +696,32 @@ $font-family: Proxima, Helvetica, Arial, sans-serif;
   display: flex;
   font-family: Proxima;
   margin: 5% 0 0 15%;
+}
+
+/* By default, hide the text */
+.conditional-text {
+  display: none;
+}
+
+/* When the screen width is greater than 600px, show the text */
+@media (min-width: 601px) {
+  .conditional-text {
+    display: inline-block;
+  }
+}
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center; /* Centers the child horizontally */
+  align-items: center;     /* Centers the child vertically */
+}
+
+.image-container img {
+  width: 50px;
+  height: 50px;
+  /* border: 3px solid #DB7093 !important;  */
+  border-radius: 25px;
+  background-color: whitesmoke;
 }

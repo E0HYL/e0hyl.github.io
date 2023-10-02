@@ -96,15 +96,26 @@ abstract: false
                 <p><i>{{section.description}}</i></p>
                   {% for projects in site.data.projects %}
                   <div class="media mt-2">
-                    <a href="{{ projects.link }}"><img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="..."></a>
+                    <a href="{{ projects.link }}">
+                      <div class="image-container">
+                        <img src="{{ projects.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="...">
+                      </div>
+                    </a>
                     <div class="media-body">
                       <h5 class="mt-0"><a href="{{ projects.link }}" class="highlighted">{{ projects.name }}</a></h5>
                       {{ projects.description }}
                       {% if projects.tech %}
-                        <h6><mark><u>Technologies</u></mark></h6>
+                      <br>
+                        <!-- <mark><u>Technologies</u></mark> -->
                         {% for tech in projects.tech %}
                         <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
                         {% endfor %}
+                        {% if projects.blog %}
+                        <small>My Related Blogs: </small>
+                          {% for blog in projects.blog %}
+                          <span class="badge badge-secondary mr-1" style="background-color:whitesmoke;">{{ blog | markdownify | strip_paragraphs }}</span>
+                          {% endfor %}
+                        {% endif %}
                       {% endif %}
                     </div>
                   </div>
