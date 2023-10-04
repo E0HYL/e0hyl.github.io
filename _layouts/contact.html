@@ -6,72 +6,138 @@ header-img:
 last-updated: 2020-10-30 5:55 PM
 ---
 {% assign theme = site.data.themes[site.ui_theme] %}
-<div class="blogcard card-2 mb-4 mt-4" style="width: 100%;">
+<div class="blogcard card-2 mb-4 mt-4">
   <div class="card-body">
     <h1 class="card-title text-center" style="font-size:{{ theme.post-title-size }};font-weight:{{ theme.post-font-weight }};">{{ page.title }}</h1>
     <p>{{ content | markdownify }} </p>
     <!-- Target -->
     {% if page.pgp %}
+    <div style="display: flex;">
     <input id="foo" style="width:50%;" class="text-muted" value="{{ site.pgp-key }}">
     <!-- Trigger -->
     <button class="btn" data-clipboard-target="#foo">
         <i class="far fa-copy" alt="Copy PGP clipboard"></i>
         <span style="font-size:14px;">Select to Copy</span>
     </button>
+    </div>
     {% endif %}
   </div>
 </div>
 
-<div class="card shadow">
+<div class="card shadow" style="padding-left: 36px;padding-right: 36px;">
   <div class="container">
-    <form name="contact">
-      <div class="mb-3 mt-5">
-        <input type="name" placeholder="Your Name" name="name" class="form-control" id="inputForName"/>
-      </div>
-      <div class="mb-3">
-        <input type="text" placeholder="Institution" name="institution" class="form-control" id="inputForInstitution"/>
-      </div>
-      <div class="mb-3">
-        <input type="text" placeholder="Position" name="position" class="form-control" id="inputForPosition"/>
-      </div>
-      <div class="mb-3">
-        <input type="text" placeholder="Personal Page" name="position" class="form-control" id="inputForWebpage"/>
-      </div>
-      <div class="mb-3">
-      <div class="mb-3">
-        <select name="subject" class="form-control" id="inputForSubject">
-          <option value="Q-paper">Q-paper</option>
-          <option value="Q-code">Q-code</option>
-          <option value="Q-team">Q-team</option>
-          <option value="Collabration">Collabration</option>
-          <option value="Others">Others</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <textarea type="message" placeholder="Your Message" name="message" class="form-control" id="inputforMessage"></textarea>
-      </div>
-      <div class="mb-3">
-        <input type="email" placeholder="Your Email" name="email" class="form-control" id="inputforEmail">
-      </div>
-      <button type="button" class="btn mb-4" style="background-color:{{theme.default-button-color}};" onclick="generateAndOpenEmail();">Email Me</button>
-    </form>
+      <form name="contact" id="contactForm">
+          <div class="form-group row mb-3 mt-5">
+              <label for="inputForName" class="col-sm-2 col-form-label">Name:</label>
+              <div class="col-sm-10">
+                  <input type="name" placeholder="Your Name" name="name" class="form-control" id="inputForName"/>
+              </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="inputforEmail" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" placeholder="Your Email" name="email" class="form-control" id="inputforEmail">
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+              <label for="inputForInstitution" class="col-sm-2 col-form-label">Organization:</label>
+              <div class="col-sm-10">
+                  <input type="text" placeholder="Institution or Company, e.g., Harvard University, Google Inc." name="institution" class="form-control" id="inputForInstitution"/>
+              </div>
+          </div>
+          <div class="form-group row mb-3">
+              <label for="inputForPosition" class="col-sm-2 col-form-label">Position:</label>
+              <div class="col-sm-10">
+                  <input type="text" placeholder="Your Position in the Organization, e.g., PhD Candidate, Software Engineer, Research Associate" name="position" class="form-control" id="inputForPosition"/>
+              </div>
+          </div>
+          <div class="form-group row mb-3">
+              <label for="inputForWebpage" class="col-sm-2 col-form-label">Personal Page:</label>
+              <div class="col-sm-10">
+                  <input type="text" placeholder="Personal Page" name="webpage" class="form-control" id="inputForWebpage"/>
+              </div>
+          </div>
+          <div class="form-group row mb-3">
+              <label for="inputForSubject" class="col-sm-2 col-form-label">Subject:</label>
+              <div class="col-sm-10">
+                  <select name="subject" class="form-control" id="inputForSubject" required>
+                    <option value="">-- Select a Subject --</option>
+                    <option value="Q-paper">Q-paper</option>
+                      <option value="Q-code">Q-code</option>
+                      <option value="Q-team">Q-team</option>
+                      <option value="Collabration">Collabration</option>
+                      <option value="Others">Others</option>
+                  </select>
+              </div>
+          </div>
+          <div class="form-group row mb-3">
+              <label for="inputforMessage" class="col-sm-2 col-form-label">Message:</label>
+              <div class="col-sm-10">
+                  <textarea type="message" placeholder="Your Message" name="message" class="form-control" id="inputforMessage"></textarea>
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-12 text-center">
+                <button type="button" class="btn mb-4 inactiveButton" disabled onclick="generateAndOpenEmail();">Email Me</button>
+              </div>
+          </div>
+      </form>
 
-    <div class="mb-3 mt-4" id="generatedTextContainer" style="display: none;">
-      <label for="generatedEmailText"><em>Generated Email Text:</em></label>
-      <textarea id="generatedEmailText" class="form-control" rows="7" style="background-color:{{theme.default-button-color}};" readonly></textarea>
-      <button class="btn mt-2" data-toggle="tooltip" title="Email text copied!" onclick="copyToClipboard();">
-        <i class="far fa-copy" alt="Copy Email clipboard"></i>
-        <span style="font-size:14px;">Copy</span>
-      </button>
+      <div class="mb-5 mt-4" id="generatedTextContainer" style="display: none;">
+          <!-- <div style="display: flex; align-items: center;">
+              <hr style="flex: 1;">
+              <span style="margin: 0 10px;"><em>Generated Email Text</em></span>
+              <hr style="flex: 1;">
+          </div> -->
+          <textarea id="generatedEmailText" class="form-control" rows="7" style="background-color:{{theme.default-button-color}};" readonly></textarea>
+          <button class="btn mt-2" data-toggle="tooltip" title="Email text copied!" onclick="copyToClipboard();">
+              <i class="far fa-copy" alt="Copy Email clipboard"></i>
+              <span style="font-size:14px;">Copy Email Text</span>
+          </button>
+      </div>
   </div>
 </div>
-</div>
+
+
+<style>
+  .activeButton {
+      color: white;
+      background-color: #4589ff;
+  }
+
+  .inactiveButton {
+      color: grey;
+      background-color: #e0e0e0;
+  }
+</style>
+
 
 <script>
 function startClippy(){
     new ClipboardJS('.btn');
 }
 window.onload = startClippy;
+
+document.getElementById('contactForm').addEventListener('input', function() {
+    let allFilled = true;
+    let emailButton = document.querySelector('button[onclick="generateAndOpenEmail();"]');
+    
+    ['inputForName', 'inputForInstitution', 'inputForPosition', 'inputForWebpage', 'inputForSubject', 'inputforMessage', 'inputforEmail'].forEach(id => {
+        if (document.getElementById(id).value.trim() === "") {
+            allFilled = false;
+        }
+    });
+    
+    if (allFilled) {
+        emailButton.removeAttribute('disabled');
+        emailButton.classList.remove('inactiveButton');
+        emailButton.classList.add('activeButton');
+    } else {
+        emailButton.setAttribute('disabled', true);
+        emailButton.classList.remove('activeButton');
+        emailButton.classList.add('inactiveButton');
+    }
+});
 
 function generateAndOpenEmail() {
   var name = document.getElementById("inputForName").value;
