@@ -10,8 +10,8 @@ links:
 - title: Blog
   url: blog.html
 
-- title: Vitae
-  url: ./assets/pdf/vitae.pdf
+# - title: Vitae
+#   url: ./assets/pdf/vitae.pdf
 
 - title: Contact
   url: contact.html

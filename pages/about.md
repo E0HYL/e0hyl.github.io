@@ -11,7 +11,7 @@ last-updated: 2020-10-30 5:55 PM
 
 I am a PhD candidate at Zhejiang University (Hangzhou, China), under the supervision of Prof. <a href="https://scholar.google.com/citations?user=uuQA_rcAAAAJ">Kui Ren</a> and <a href="https://scholar.google.com/citations?user=5fa4lOQAAAAJ&amp;hl=en">Zhan Qin</a>.
 
-Currently, I am actively seeking post-doctoral opportunities abroad.
+Currently, I am actively seeking post-doctoral opportunities abroad. Find my curriculum vitae <a href='./assets/pdf/vitae.pdf' class="highlighted">here</a>.
 
 {% include experience.html %}
 
