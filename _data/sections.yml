@@ -19,7 +19,7 @@
 
 - name: Projects
   id: projects
-  description: Selected projects from my Github, visit for more at https://github.com/E0HYL.
+  description: Selected projects from my Github, visit for more at <a href='https://github.com/E0HYL' target='_blank'>https://github.com/E0HYL<a>.
   content: 
   url: projects.html
   first: false
