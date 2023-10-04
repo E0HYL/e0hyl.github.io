@@ -76,7 +76,7 @@ abstract: false
         {% for section in site.data.sections %}
           {% if section.first %}
             {% if section.name == "Publications" %}
-              <div class="tab-pane active overflow-auto" id="{{section.id}}" role="tabpanel">
+              <div class="tab-pane active" id="{{section.id}}" role="tabpanel">
                 <p><i>{{section.description}}</i></p>
                 <p class="card-text">{% bibliography -f papers %}</p>
               </div>
@@ -124,68 +124,7 @@ abstract: false
                 <i> &nbsp;&nbsp; </i>      
               </div>
             {% elsif section.name == "Experiences" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <p><i>{{section.description}}</i></p>
-                <!-- Education & Awards Section -->
-                <p style="font-size:large;"><i class="fas fa-school"></i> Education & Awards </p>
-                {% for edu in site.data.education %}
-                <div class="list-group">
-                    <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <p class="mb-1">
-                                <b>{{ edu.School }}:</b> <em>{{ edu.Degree }}</em>
-                            </p>
-                            <small>{{ edu.StartDate }} - {{ edu.EndDate }}</small>
-                        </div>
-                        <em>{{ edu.Program }}, {{ edu.Department }}</em>
-                        <br><small>Awards: </small>
-                        {% for award in edu.Awards %}
-                        <span class="badge badge-secondary mr-1" style="background-color:black;">{{ award }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
-                <!-- Internships Section -->
-                <p style="font-size:large;"><i class="fas fa-building"></i> Internships </p>
-                {% for int in site.data.intern %}
-                <div class="list-group">
-                    <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <p class="mb-1">
-                                <b>{{ int.Company }}:</b> <em>{{ int.Department }}</em>
-                            </p>
-                            <small>{{ int.StartDate }} - {{ int.EndDate }}</small>
-                        </div>
-                        <em>{{ int.Description }}</em>
-                        <div class="title font-weight-bold">
-                            &nbsp; {{int.title}}
-                        </div>
-                        <a href="{{ int.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="{{ int.issues }}" class="btn btn-sm z-depth-0" role="button" target="_blank"><i class="fas fa-info-circle"></i> Issues</a>
-                    </div>
-                </div>
-                {% endfor %}
-                <!-- Professional Services Section -->
-                <p style="font-size:large;"><i class="fas fa-book-reader"></i> Professional Services </p>
-                {% for ser in site.data.services %}
-                <div class="list-group">
-                    <div class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <p class="mb-1">
-                                <b>{{ ser.Association }}:</b> <em>{{ ser.Job }}</em>
-                            </p>
-                            <small>{{ ser.Time }}</small>
-                        </div>
-                        {% if ser.Awards %}
-                        <small>Awards: </small>
-                        {% for award in ser.Awards %}
-                        <span class="badge badge-secondary mr-1" style="background-color:black;">{{ award }}</span>
-                        {% endfor %}
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>  
+              {% include experience.html %}
             {% elsif section.name == "Teaching" %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
                 <p><i>{{section.description}}</i></p>

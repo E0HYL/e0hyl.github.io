@@ -52,7 +52,7 @@
       {% if entry.year %}
         {{entry.year}}
       {% endif %}
-      <button class="btn btn-light copy-btn" data-bibtex="{{ entry.bibtex }}" style="padding: 0;color:gray;vertical-align: top;">
+      <button class="btn btn-light copy-btn" data-bibtex="{{ entry.bibtex }}" style="padding: 0;color:gray;vertical-align: top;" data-toggle="bibtex" title="Bibtex copied!">
         <i class="fas fa-file-export fa-2xs" style="color: #DB7093;"></i>copy bibtex
       </button>
       </div>
@@ -133,7 +133,9 @@ function copyFunction() {
     textarea.select();
     try {
         document.execCommand('copy');
-        alert('BibTeX copied to clipboard!');
+        // Only show the tooltip for the clicked button
+        $(this).tooltip('show');
+        setTimeout(() => $(this).tooltip('hide'), 2000);
     } catch (err) {
         alert('Unable to copy BibTeX.');
     }
@@ -146,6 +148,12 @@ document.addEventListener("DOMContentLoaded", function() {
     copyButtons.forEach(btn => {
         btn.removeEventListener('click', copyFunction);  // Remove previous listeners
         btn.addEventListener('click', copyFunction);  // Add listener
+        // Initialize Bootstrap tooltip for each button
+        $(btn).tooltip({
+            trigger: 'manual',  
+            title: 'Bibtex copied!',
+        });
     });
 });
+
 </script>
