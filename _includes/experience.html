@@ -6,8 +6,10 @@
 
 <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
     <p><i>{{section.description}}</i></p>
+    {% if edu.Awards %}
     <!-- Education & Awards Section -->
     <p style="{{ style }}"><i class="fas fa-school"></i> Education & Awards </p>
+    {% endif %}
     {% for edu in site.data.education %}
     <div class="list-group">
         <div class="list-group-item list-group-item-action">
