@@ -8,6 +8,6 @@ date: 2020-11-20
 - 🌱 I’m always learning recent advances in the related domains and never limit myself to one way
 - 👯 I’m looking to collaborate on LLM-powered software security, e.g., for vulnerability detection, malware summary and defense
 - 💬 Visit my previous blog at <a href='https://e0hyl.github.io/BLOG-OF-E0'>https://e0hyl.github.io/BLOG-OF-E0</a>
-- 📫 How to reach me: yiling-he@ucl.ac.uk (current position: Research Fellow at University College London)
+- 📫 How to reach me: yiling-he@ucl.ac.uk (Research Fellow at University College London)
 
 <a href="./contact.html" class="highlighted">Contact Me</a>
