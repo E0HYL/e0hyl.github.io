@@ -111,6 +111,9 @@
     {% if entry.cate %}
       <span class="badge badge-common">{{ entry.cate }}</span>
     {% endif %}
+    {% if entry.highlight %}
+      <span class="badge badge-highlight">{{ entry.highlight }}</span>
+    {% endif %}
     {% if entry.badge %}
       <span class="badge badge-primary">{{ entry.badge }}</span>
     {% endif %}
