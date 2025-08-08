@@ -108,6 +108,9 @@
     {% if entry.website %}
       <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank"><i class="fas fa-external-link-alt"></a>
     {% endif %}
+    {% if entry.badge %}
+      <span class="badge badge-primary">{{ entry.badge }}</span>
+    {% endif %}
     </div>
 
     <!-- Hidden abstract block -->
