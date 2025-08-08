@@ -43,9 +43,9 @@ ol.bibliography {
   counter-reset: item;
   list-style-type: none;
 } */
-ol.bibliography li::before {
+/* ol.bibliography li::before {
   content: none;
-}
+} */
 
 .dumbarton-home{
     width:50%;
