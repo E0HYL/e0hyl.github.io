@@ -20,7 +20,7 @@
           {% else %}
             {% unless forloop.last %}
               {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
-                <b>{{author.first}} {{author.last}}</b>,
+                <b>{{author.first}} {{author.last}}</b>{% if entry.corresponding %} ✉️{% endif %},
               {% else %}
                 {% if site.data.coauthors[author.last] and site.data.coauthors[author.last].first_name == author.first %}
                   <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>,
@@ -30,7 +30,7 @@
               {% endif %}
             {% else %}
               {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
-                and <b>{{author.first}} {{author.last}}</b>
+                and <b>{{author.first}} {{author.last}}</b>{% if entry.corresponding %} ✉️{% endif %}
               {% else %}
                 {% if site.data.coauthors[author.last] and site.data.coauthors[author.last].first_name == author.first %}
                   and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>
