@@ -13,10 +13,7 @@
         {% for author in entry.author_array %}
           {% if forloop.length == 1 %}
             {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
-              <b>{{author.first}} {{author.last}}</b>
-              {% if entry.corresponding %}
-              <span title="Corresponding Author">✉️</span>
-              {% endif %}
+              <b>{{author.first}} {{author.last}}</b>{% if entry.corresponding %} ✉️{% endif %}
             {% else %}
               {{author.first}} {{author.last}}
             {% endif %}
