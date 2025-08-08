@@ -47,17 +47,17 @@ a.highlighted:hover {
 
 .badge-primary {
     color: #fff !important;
-    background-color: #4285f4 !important;
+    background-color: lightcoral !important;
 }
 
 .badge-common {
-    color: #fff !important;
-    background-color: lightblue !important;
+    color: black !important;
+    background-color: whitesmoke !important;
 }
 
 .badge-highlight {
     color: #fff !important;
-    background-color: lightseagreen !important;
+    background-color: #4285f4 !important;
 }
 
 .dumbarton-home{
