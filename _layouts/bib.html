@@ -121,7 +121,13 @@
 
 <script>
 function copyFunction() {
-    const bibtex = this.getAttribute('data-bibtex');
+    let bibtex = this.getAttribute('data-bibtex');
+
+    // Remove unwanted fields from the BibTeX
+    const cleaned = bibtex
+        .split('\n')
+        .filter(line => !line.match(/^\s*(corresponding|note|abstract)\s*=/i))
+        .join('\n');
     
     const textarea = document.createElement('textarea');
     Object.assign(textarea.style, {
@@ -130,7 +136,7 @@ function copyFunction() {
         top: '0',
         opacity: '0'
     });
-    textarea.textContent = bibtex;
+    textarea.textContent = cleaned;  // Use cleaned bibtex
     document.body.appendChild(textarea);
     
     textarea.select();
