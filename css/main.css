@@ -38,8 +38,13 @@ a.highlighted:hover {
 
 }
 
+/* In your stylesheet or inline <style> */
 ol.bibliography {
-  list-style-type: none;  /* removes automatic numbers */
+  counter-reset: item;
+  list-style-type: none;
+}
+ol.bibliography li::before {
+  content: none;
 }
 
 .dumbarton-home{
