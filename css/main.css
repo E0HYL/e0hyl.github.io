@@ -50,6 +50,11 @@ a.highlighted:hover {
     background-color: #4285f4 !important;
 }
 
+.badge-common {
+    color: #fff !important;
+    background-color: gray !important;
+}
+
 .dumbarton-home{
     width:50%;
     max-width:300px;
