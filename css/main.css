@@ -38,7 +38,9 @@ a.highlighted:hover {
 
 }
 
+/* In your stylesheet or inline <style> */
 ol.bibliography {
+  counter-reset: item;
   list-style-type: disc;
 }
 ol.bibliography li::before {
