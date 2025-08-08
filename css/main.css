@@ -39,7 +39,8 @@ a.highlighted:hover {
 }
 
 ol.bibliography {
-  list-style-type: circle;
+  counter-reset: item;
+  list-style-type: none;
 }
 
 .dumbarton-home{
