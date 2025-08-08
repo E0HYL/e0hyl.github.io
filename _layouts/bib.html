@@ -111,6 +111,9 @@
     {% if entry.badge %}
       <span class="badge badge-primary">{{ entry.badge }}</span>
     {% endif %}
+    {% if entry.cate %}
+      <span class="badge badge-common">{{ entry.cate }}</span>
+    {% endif %}
     </div>
 
     <!-- Hidden abstract block -->
@@ -129,7 +132,7 @@ function copyFunction() {
     // Remove unwanted fields from the BibTeX
     const cleaned = bibtex
         .split('\n')
-        .filter(line => !line.match(/^\s*(corresponding|note|abstract|select)\s*=/i))
+        .filter(line => !line.match(/^\s*(corresponding|note|abstract|select|badge|cate)\s*=/i))
         .join('\n');
     
     const textarea = document.createElement('textarea');
