@@ -42,7 +42,8 @@
   abstract={The rapid growth of mobile applications has escalated Android mal ware threats. Although there are numerous detection methods, they often struggle with evolving attacks, dataset biases, and limited explainability. Large Language Models (LLMs) offer a promising alternative with their zero-shot inference and reasoning capabilities. However, applying LLMs to Android malware detection presents two key chal-lenges: (1) the extensive support code in Android applications, often spanning thousands of classes, exceeds LLMs' context limits and obscures malicious behavior within benign functionality; (2) the structural complexity and interdepen-dencies of Android applications surpass LLMs' sequence-based reasoning, fragmenting code analysis and hindering malicious intent inference. To address these challenges, we propose LAMD, a practical context-driven framework to enable LLM-based Android malware detection. LAMD integrates key context extraction to isolate security-critical code regions and construct program structures, then applies tier-wise code reasoning to analyze application behavior progressively, from low-level instructions to high-level semantics, providing final prediction and explanation. A well-designed factual consistency verification mechanism is equipped to mitigate LLM hallucinations from the first tier. Evaluation in real-world settings demonstrates LAMD's effectiveness over conventional detectors, establishing a feasible basis for LLM -driven mal ware analysis in dynamic threat landscapes.},
   code={https://zenodo.org/records/14884736},
   pdf={https://arxiv.org/pdf/2502.13055},
-  html={https://ieeexplore.ieee.org/abstract/document/11050830}
+  html={https://ieeexplore.ieee.org/abstract/document/11050830},
+  corresponding={true}
 }
 
 @inproceedings{gao2025distill,
@@ -54,7 +55,8 @@
   organization={IEEE},
   abstract={Web shell detection has become increasingly crucial with the expansion of cloud computing, where automated malware analysis serves as a foundational approach. A key challenge in malware detection lies in balancing the reduction of false positives with maintaining detection accuracy amid rapid software ecosystem evolution. Existing methods require substantial expert intervention to mitigate false positives and often neglect the resource-intensive measures required to address model degradation caused by software updates. This study introduces ASTBAR, a novel method that extracts fine-grained AST fragments to distill benign behavioral knowledge from webserver software. By leveraging program structure and semantic analysis, ASTBAR generates fragment-level representations of benign samples and employs fragment matching to identify malware. Unlike prior techniques, ASTBAR achieves simultaneous improvements in precision, recall, and adaptability to software evolution. The evaluation results demonstrate that ASTBAR achieves an F1 score of 65. 35%, outperforming the state-of-theart methods by 10.39%. In a 12-month industrial deployment spanning over one million users, ASTBAR maintained a 97.63% recall rat while reducing false positives by 700+ cases daily (equivalent to 30 expert hours).},
   code={https://github.com/IWQOS-ASTBAR/ASTBAR},
-  pdf={https://gmz9976.github.io/assets/2025192311.pdf}
+  pdf={https://gmz9976.github.io/assets/2025192311.pdf},
+  corresponding={true}
 }
 
 @inproceedings{shao2025explanation,
@@ -63,7 +65,9 @@
   booktitle={Network and Distributed System Security Symposium (NDSS)},
   year={2025},
   code={https://github.com/shaoshuo-ss/EaaW},
+  html={https://www.ndss-symposium.org/wp-content/uploads/2025-338-paper.pdf},
   pdf={https://arxiv.org/pdf/2405.04825},
+  slides={https://www.ndss-symposium.org/wp-content/uploads/3D-s0338-shao.pdf},
   abstract={Ownership verification is currently the most critical and widely adopted post-hoc method to safeguard model copyright. In general, model owners exploit it to identify whether a given suspicious third-party model is stolen from them by examining whether it has particular properties `inherited’ from their released models. Currently, backdoor-based model watermarks are the primary and cutting-edge methods to implant such properties in the released models. However, backdoor-based methods have two fatal drawbacks, including harmfulness and ambiguity. The former indicates that they introduce maliciously controllable misclassification behaviors (i.e., backdoor) to the watermarked released models. The latter denotes that malicious users can easily pass the verification by finding other misclassified samples, leading to ownership ambiguity.}
 }
 
@@ -75,6 +79,7 @@
   year={2023},
   pdf={https://arxiv.org/pdf/2308.05362.pdf},
   code={https://github.com/E0HYL/FINER-explain},
+  html={https://dl.acm.org/doi/abs/10.1145/3576915.3616599},
   abstract={Deep learning classifiers achieve state-of-the-art performance in various risk detection applications. They explore rich semantic representations and are supposed to automatically discover risk behaviors. However, due to the lack of transparency, the behavioral semantics cannot be conveyed to downstream security experts to reduce their heavy workload in security analysis. Although feature attribution (FA) methods can be used to explain deep learning, the underlying classifier is still blind to what behavior is suspicious, and the generated explanation cannot adapt to downstream tasks, incurring poor explanation fidelity and intelligibility. In this paper, we propose FINER, the first framework for risk detection classifiers to generate high-fidelity and high-intelligibility explanations. The high-level idea is to gather explanation efforts from model developer, FA designer, and security experts. To improve fidelity, we fine-tune the classifier with an explanation-guided multi-task learning strategy. To improve intelligibility, we engage task knowledge to adjust and ensemble FA methods. Extensive evaluations show that FINER improves explanation quality for risk detection. Moreover, we demonstrate that FINER outperforms a state-of-the-art tool in facilitating malware analysis.}
 }
 
