@@ -129,7 +129,7 @@ function copyFunction() {
     // Remove unwanted fields from the BibTeX
     const cleaned = bibtex
         .split('\n')
-        .filter(line => !line.match(/^\s*(corresponding|note|abstract)\s*=/i))
+        .filter(line => !line.match(/^\s*(corresponding|note|abstract|select)\s*=/i))
         .join('\n');
     
     const textarea = document.createElement('textarea');
