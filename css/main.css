@@ -38,11 +38,11 @@ a.highlighted:hover {
 
 }
 
-/* In your stylesheet or inline <style> */
+/* /* In your stylesheet or inline <style> */
 ol.bibliography {
   counter-reset: item;
   list-style-type: none;
-}
+} */
 ol.bibliography li::before {
   content: none;
 }
