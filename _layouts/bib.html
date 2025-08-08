@@ -1,6 +1,7 @@
 ---
 ---
 
+{% each_reference papers %}
 {% assign show_abstract = page.abstract and entry.abstract %}
 {% if entry.select or show_abstract %}
 <div class="row">
@@ -121,6 +122,7 @@
   </div>
 </div>
 {% endif %}
+{% endeach_reference %}
 
 <script>
 function copyFunction() {
