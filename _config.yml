@@ -20,8 +20,8 @@ image_alt: A minimalistic jekyll theme for academic    # image description
 # -----------SITE SETTINGS---------------#
 #========================================#: 
 author: E0
-profile_image: ./assets/img/avatar/photo.jpg #/assets/img/avatar/avatar.jpeg 
-occupation: Ph.D. candidate
+profile_image: ./assets/img/avatar/photo_2025.jpg #/assets/img/avatar/avatar.jpeg 
+occupation: Research Fellow
 snippet:
 twitter: 
 github: E0HYL
