@@ -2,7 +2,7 @@
 ---
 
 {% assign show_abstract = page.abstract and entry.abstract %}
-{% if entry.select or show_abstract %}
+<!-- {% if entry.select or show_abstract %} -->
 <div class="row">
   <div id="{{entry.key}}" class="col-sm-12">
     {% if entry.type == "thesis" %}
@@ -120,7 +120,7 @@
     {% endif %}
   </div>
 </div>
-{% endif %}
+<!-- {% endif %} -->
 
 <script>
 function copyFunction() {
