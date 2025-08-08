@@ -1,8 +1,6 @@
 ---
 ---
 
-{% assign show_abstract = page.abstract and entry.abstract %}
-<!-- {% if entry.select or show_abstract %} -->
 <div class="row">
   <div id="{{entry.key}}" class="col-sm-12">
     {% if entry.type == "thesis" %}
@@ -113,14 +111,13 @@
     </div>
 
     <!-- Hidden abstract block -->
-    {% if show_abstract %}
+    {% if page.abstract and entry.abstract %}
     <div class="abstract hidden">
       <p><b>Abstract:</b> {{ entry.abstract }}</p>
     </div>
     {% endif %}
   </div>
 </div>
-<!-- {% endif %} -->
 
 <script>
 function copyFunction() {
