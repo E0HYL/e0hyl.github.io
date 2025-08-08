@@ -38,15 +38,6 @@ a.highlighted:hover {
 
 }
 
-/* In your stylesheet or inline <style> */
-ol.bibliography {
-  counter-reset: item;
-  list-style-type: disc;
-}
-ol.bibliography li::before {
-  content: none;
-}
-
 .dumbarton-home{
     width:50%;
     max-width:300px;
