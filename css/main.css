@@ -38,6 +38,10 @@ a.highlighted:hover {
 
 }
 
+ol.bibliography {
+  list-style-type: none;  /* removes automatic numbers */
+}
+
 .dumbarton-home{
     width:50%;
     max-width:300px;
