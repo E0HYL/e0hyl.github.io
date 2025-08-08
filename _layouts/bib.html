@@ -108,11 +108,9 @@
     {% if entry.website %}
       <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank"><i class="fas fa-external-link-alt"></a>
     {% endif %}
-    {% for cate in entry.cate_array %}
-      {% if entry.cate %}
-        <span class="badge badge-common">{{ entry.cate }}</span>
-      {% endif %}
-    {% endfor %}
+    {% if entry.cate %}
+      <span class="badge badge-common">{{ entry.cate }}</span>
+    {% endif %}
     {% if entry.badge %}
       <span class="badge badge-primary">{{ entry.badge }}</span>
     {% endif %}
