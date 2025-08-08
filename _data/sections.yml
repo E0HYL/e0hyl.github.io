@@ -1,6 +1,6 @@
 - name: Publications
   id: publications
-  description: Selection of my recent publications here.
+  description: Selection of my publications here. 📧 denotes corresponding author.
   url: publications.html
   first: true
   
