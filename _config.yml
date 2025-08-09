@@ -125,9 +125,7 @@ scholar:
   style: apa
   locale: en
   source: /_bibliography/
-  bibliography:
-    - papers_select.bib
-    - papers_extra.bib
+  bibliography: papers.bib
   bibliography_template: bib
   replace_strings: true
   join_strings: true
