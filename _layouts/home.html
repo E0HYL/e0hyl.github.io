@@ -79,7 +79,7 @@ lossy: false
             {% if section.name == "Publications" %}
               <div class="tab-pane active" id="{{section.id}}" role="tabpanel">
                 <p><i>{{section.description}}</i></p>
-                <p class="card-text">{% bibliography -f papers --query @*[select=true] %}</p>
+                <p class="card-text">{% bibliography -f papers --query @*[select="true"] %}</p>
               </div>
             {% else %}
               <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel">
