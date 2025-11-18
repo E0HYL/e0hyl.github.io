@@ -1,12 +1,13 @@
 ---
 layout: home
 title: 
-date: 2020-11-20 
+date: 2025-11-18 
 ---
 ### Hi, I'm Yiling He 👋
-- 🔭 I’m currently working on Code LLM applications, focusing on the problems of semantics preserving and robustness to drift
-- 🌱 I’m always learning recent advances in the related domains and never limit myself to one way
-- 👯 I’m looking to collaborate on LLM-powered software security, e.g., for vulnerability detection, malware summary and defense
+- 🌱 My Chinese name is `贺弋玲`. My last name is pronounced “her,” and in Chinese it means “congrats.”
+- 🔭 I’m always learning recent advances in the related domains and never limit myself to one way
+- 👯 I currently work on LLM-powered software analysis, designing systems that are both highly effective and trustworthy.
+  - If you’re also excited about advancing AI for software security and understanding, I’d love to collaborate.
 - 💬 Visit my previous blog at <a href='https://e0hyl.github.io/BLOG-OF-E0'>https://e0hyl.github.io/BLOG-OF-E0</a>
 - 📫 How to reach me: yiling-he@ucl.ac.uk (Research Fellow at University College London)
 
