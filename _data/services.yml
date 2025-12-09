@@ -26,14 +26,18 @@
   Job: External Reviewer
   Time: 2024, 2022
 
-- Association: Tsinghua Science and Technology (TST)
-  Job: Reviewer
-  Time: 2025, 2024
+# - Association: ACM Transactions on Privacy and Security (TOPS)
+#   Job: Reviewer
+#   Time: 2025
 
-- Association: IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
-  Job: Reviewer
-  Time: 2024
+# - Association: Tsinghua Science and Technology (TST)
+#   Job: Reviewer
+#   Time: 2025, 2024
 
-- Association: IEEE Transactions on Dependable and Secure Computing (TDSC)
-  Job: Reviewer
-  Time: 2023
+# - Association: IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
+#   Job: Reviewer
+#   Time: 2024
+
+- Association: IEEE Transactions on Dependable and Secure Computing (TDSC), ACM Transactions on Privacy and Security (TOPS), IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), Tsinghua Science and Technology (TST)
+  Job: Journal Reviewer
+  Time: 2023~
