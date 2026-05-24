@@ -8,9 +8,9 @@ last-updated: 2020-10-30 5:55 PM
 {% assign theme = site.data.themes[site.ui_theme] %}
 <div class="blogcard card-2 mb-4 mt-4">
   <div class="card-body">
-    <h1 class="card-title text-center" style="font-size:{{ theme.post-title-size }};font-weight:{{ theme.post-font-weight }};">{{ page.title }}</h1>
+    <h5 class="card-title">{{ page.title }}</h5>
     <p>{{ content | markdownify }} </p>
-    <!-- Target -->
+    <!-- <!-- Target -->
     {% if page.pgp %}
     <div style="display: flex;">
     <input id="foo" style="width:50%;" class="text-muted" value="{{ site.pgp-key }}">
@@ -20,7 +20,7 @@ last-updated: 2020-10-30 5:55 PM
         <span style="font-size:14px;">Select to Copy</span>
     </button>
     </div>
-    {% endif %}
+    {% endif %} -->
   </div>
 </div>
 
