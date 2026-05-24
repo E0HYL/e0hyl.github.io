@@ -1,8 +1,4 @@
 source "https://rubygems.org"
-#gemspec
-gem 'jekyll'                    #Needed since this is a theme for Jekyll
-gem 'jekyll-feed'
+gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-scholar'
-gem 'jekyll-environment-variables'
-
 gem "webrick", "~> 1.8"
