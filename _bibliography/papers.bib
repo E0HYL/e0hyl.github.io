@@ -1,6 +1,21 @@
 ---
 ---
 
+@inproceedings{yao2026redteaming,
+  select={true},
+  title={Red-Teaming Agent Execution Contexts: Open-World Security Evaluation on OpenClaw},
+  author={Yao, Hongwei and Liu, Yiming and He, Yiling and Yang, Bingrun},
+  booktitle={Second Workshop on Agents in the Wild: Safety, Security, and Beyond (ICML 2026 Workshop AIWILD)},
+  year={2026},
+  url={https://openreview.net/forum?id=PpcTDVb0U8},
+  html={https://zjuicsr.github.io/DeepTrap},
+  code={https://github.com/ZJUICSR/DeepTrap},
+  data={https://huggingface.co/datasets/ZJUICSR/DeepTrap},
+  cate={CCF A Workshop},
+  corresponding={true},
+  abstract={Agentic language-model systems increasingly rely on mutable execution contexts, including files, memory, tools, skills, and auxiliary artifacts, creating security risks beyond explicit user prompts. This paper presents DeepTrap, an automated framework for discovering contextual vulnerabilities in OpenClaw. DeepTrap formulates adversarial context manipulation as a black-box trajectory-level optimization problem that balances risk realization, benign-task preservation, and stealth. It combines risk-conditioned evaluation, multi-objective trajectory scoring, reward-guided beam search, and reflection-based deep probing to identify high-value compromised contexts. We construct a 42-case benchmark spanning six vulnerability classes and seven operational scenarios, and evaluate nine target models using attack and utility grading scores. Results show that contextual compromise can induce substantial unsafe behavior while preserving user-facing task completion, demonstrating that final-response evaluation is insufficient. The findings highlight the need for execution-centric security evaluation of agentic AI systems.}
+}
+
 @inproceedings{chen2026bcsd,
   select={true},
   title={Unveiling the Fragility of Binary Code Similarity Detection via Targeted Attacks with Model Explanations},
