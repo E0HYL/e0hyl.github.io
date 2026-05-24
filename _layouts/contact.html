@@ -10,17 +10,6 @@ last-updated: 2020-10-30 5:55 PM
   <div class="card-body">
     <h5 class="card-title">{{ page.title }}</h5>
     <p>{{ content | markdownify }} </p>
-    <!-- <!-- Target -->
-    {% if page.pgp %}
-    <div style="display: flex;">
-    <input id="foo" style="width:50%;" class="text-muted" value="{{ site.pgp-key }}">
-    <!-- Trigger -->
-    <button class="btn" data-clipboard-target="#foo">
-        <i class="far fa-copy" alt="Copy PGP clipboard"></i>
-        <span style="font-size:14px;">Select to Copy</span>
-    </button>
-    </div>
-    {% endif %} -->
   </div>
 </div>
 
