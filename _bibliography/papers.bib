@@ -9,7 +9,7 @@
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
   abstract = {Automated malware classifiers achieve strong detection performance, but auditing requires more than flagging a sample: analysts must explain malicious behaviors and justify them with concrete code evidence, a requirement that traditional signature-based methods and learning-based XAI often fail to satisfy in a human-interpretable manner. Large Language Models (LLMs) appear well-suited for this task due to their code reasoning and summarization ability, yet it is unclear whether their reasoning capabilities are up to the auditing. In particular, evaluating them faces three hurdles: (1) the lack of detailed, human-written behavior ground truth for reliable benchmarking; (2) the scale of real-world applications’ codebases typically exceed the context limits of current models, which cannot be fully processed at once; and (3) the absence of reliable mechanisms to verify whether LLM-generated behavioral claims are faithfully supported by concrete code evidence. Together, these obstacles make benchmarking LLM-based auditing non-trivial, leaving their true capabilities and failure modes opaque. To bridge this gap, we introduce MalEval, an evaluation framework for systematically measuring the reasoning fidelity of LLMs in malware auditing. We pair real-world application codebases with expert-written audit reports to obtain fine-grained, behavior-level ground truth. Large codebases are compressed into unified behavior-relevant program contexts via a context-driven intermediate representation that preserves essential call relations. Both expert reports and model outputs are then mapped, through constrained reasoning, into structured evidence chains linking code-level facts to high-level behaviors in a common, comparable space. Built on this foundation, MalEval decomposes auditing into 4 stage-wise auditing tasks, allowing each intermediate judgment to be independently verified under limited context windows. We leverage MalEval to evaluate seven widely used LLMs and uncover clear capability boundaries: models rely on surface cues over verifiable evidence, struggle to compose dispersed facts into coherent attack chains, and are highly sensitive to context formulation. These findings shift the focus from optimizing isolated outputs to designing LLM and agentic workflows that can reliably support malware auditing.},
-  booktitle = {Proceedings of the 35nd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
+  booktitle = {Proceedings of the 35th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
   pages = {To Appear},
   series = {ISSTA 2026},
   cate={CCF A Conference},
@@ -62,6 +62,23 @@
   code={https://github.com/zju-ws-seclab/Explainer-Guided-Adv-Attack-BCSD},
   html={https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/156/Unveiling-the-Fragility-of-Binary-Code-Similarity-Detection-via-Targeted-Attacks-with},
   abstract={Binary code similarity detection (BCSD) serves as a fundamental technique for various software engineering tasks, e.g., vulnerability detection and classification. Attacks against such BCSD models have therefore drawn extensive attention, aiming at misleading the models to generate erroneous predictions. Prior works have explored various approaches to generating semantic-preserving variants, i.e., adversarial samples, to evaluate the robustness of the models against adversarial attacks. However, they have mainly relied on heuristic criteria or iterative greedy algorithms to locate salient code influencing the model output, failing to operate on a solid theoretical basis. Moreover, when processing programs with high complexities, such attacks tend to be time-consuming. In this work, we unveil the fragility of BCSD models through a novel attack framework guided by model explanations. In particular, we focus on targeted attacks where the attack goal is to mislead the model’s predictions to a specific target. Our attack leverages the superior capability of black-box, model-agnostic explainers in interpreting the model decision boundaries, thereby pinpointing the critical code snippet to apply semantic-preserving perturbations. The evaluation results demonstrate that compared with the state-of-the-art attacks, the proposed attacks achieve higher attack success rate in almost all scenarios, while also improving the efficiency and transferability. Our real-world case studies on vulnerability detection and classification further demonstrate the security implications of our attacks, highlighting fundamental vulnerabilities in current BCSD models, and the urgent need for more robust designs.}
+}
+
+@article{yang26shadowcode,
+  author={Yang, Yuchen and Li, Yiming and Yao, Hongwei and Yang, Bingrun and He, Yiling and Zhang, Tianwei and Tao, Dacheng and Qin, Zhan},
+  journal={IEEE Transactions on Dependable and Secure Computing}, 
+  title={ShadowCode: Towards (Automatic) External Prompt Injection Attack against Code LLMs}, 
+  year={2026},
+  cate={CCF A Journal},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Codes;Modeling;Automatic speech recognition;Large language models;Optimization;Design methodology;Context;Python;Java;Training;Code-oriented Large Language Models;Prompt Injection Attack;Code Security;AI Security},
+  doi={10.1109/TDSC.2026.3703498},
+  pdf={https://arxiv.org/pdf/2407.09164},
+  html={https://ieeexplore.ieee.org/abstract/document/11563638/},
+  code={https://github.com/LianPing-cyber/ShadowCodeEPI},
+  abstract={Recent advancements have led to the widespread adoption of code-oriented large language models (Code LLMs) for programming tasks. Despite their success in deployment, their security research is left far behind. This paper introduces a new attack paradigm: (automatic) external prompt injection against Code LLMs, where attackers generate concise, non-functional induced perturbations and inject them within a victim's code context. These induced perturbations can be disseminated through commonly used dependencies (e.g., packages or RAG's knowledge base), manipulating Code LLMs to achieve malicious objectives during the code completion process. Compared to existing attacks, this method does not necessitate control over the model's training process, unlike backdoor attacks, and can achieve specific malicious objectives that are challenging for adversarial attacks. Furthermore, we propose ShadowCode, a simple yet effective method that automatically generates induced perturbations based on code simulation to achieve effective and stealthy external prompt injection. ShadowCode designs its perturbation optimization objectives by simulating the victim's code contexts and employs a greedy optimization approach with two enhancement modules: forward reasoning enhancement and keyword-based perturbation design. We evaluate our method across 13 distinct malicious objectives, generating 31 threat cases spanning three popular programming languages. Our results demonstrate that ShadowCode successfully attacks three representative open-source Code LLMs (achieving up to a 97.9% attack success rate) and two mainstream commercial Code LLM-integrated applications (with over 90% attack success rate) across all threat cases, using only a 12-token non-functional induced perturbation.}
 }
 
 @inproceedings{he2025dream,
@@ -172,7 +189,20 @@
   corresponding={true}
 }
 
-@article{xie2025retouchuaa,
+@article{xie2025boosting,
+  title={Boosting illuminant estimation in deep color constancy through brightness robustness enhancement},
+  author={Xie, Mengda and Zhong, Chengzhi and He, Yiling and Qin, Zhan and Fang, Meie},
+  journal={Pattern Recognition},
+  pages={112153},
+  year={2025},
+  publisher={Elsevier},
+  abstract={Color constancy estimates illuminant chromaticity to correct color-biased images. Recently, Deep Neural Network-driven Color Constancy (DNNCC) models have made substantial advancements. Nevertheless, the potential risks in DNNCC due to the vulnerability of deep neural networks have not yet been explored. In this paper, we conduct the first investigation into the impact of a key factor in color constancy-brightness-on DNNCC from a robustness perspective. Our evaluation reveals that several mainstream DNNCC models exhibit high sensitivity to brightness despite their focus on chromaticity estimation. This sheds light on a potential limitation of existing DNNCC models: their sensitivity to brightness may hinder performance given the widespread brightness variations in real-world datasets. From the insights of our analysis, we propose a simple yet effective brightness robustness enhancement strategy for DNNCC models, termed BRE. The core of BRE is built upon the adaptive step-size adversarial brightness augmentation technique, which identifies high-risk brightness variation and generates augmented images via explicit brightness adjustment. Subsequently, BRE develops a brightness-robustness-aware model optimization strategy that integrates adversarial brightness training and brightness contrastive loss, significantly bolstering the brightness robustness of DNNCC models. BRE is hyperparameter-free and can be integrated into existing DNNCC models, without incurring additional overhead during the testing phase. Experiments on two public color constancy datasets-ColorChecker and Cube+-demonstrate that the proposed BRE consistently enhances the illuminant estimation performance of existing DNNCC models, reducing the estimation error by an average of 5.04% across six mainstream DNNCC models, underscoring the critical role of enhancing brightness robustness in these models.},
+  cate={CCF B Journal},
+  html={https://www.sciencedirect.com/science/article/pii/S0031320325008131},
+  pdf={https://arxiv.org/pdf/2502.12418}
+}
+
+@article{xie2024retouchuaa,
   title={RetouchUAA: Unconstrained Adversarial Attack via Realistic Image Retouching},
   author={Xie, Mengda and He, Yiling and Qin, Zhan and Fang, Meie},
   journal={IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},
