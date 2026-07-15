@@ -1,6 +1,24 @@
 ---
 ---
 
+@inproceedings{zheng26maleval,
+  select={true},
+  author = {Zheng, Xinran and Qian, Xingzhi and He, Yiling and Yang, Shuo and Cavallaro, Lorenzo},
+  title = {Is "Knowing It's Malicious'' Enough? Evaluating LLMs for Fine-Grained Malware Behavior Auditing},
+  year = {2026},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  abstract = {Automated malware classifiers achieve strong detection performance, but auditing requires more than flagging a sample: analysts must explain malicious behaviors and justify them with concrete code evidence, a requirement that traditional signature-based methods and learning-based XAI often fail to satisfy in a human-interpretable manner. Large Language Models (LLMs) appear well-suited for this task due to their code reasoning and summarization ability, yet it is unclear whether their reasoning capabilities are up to the auditing. In particular, evaluating them faces three hurdles: (1) the lack of detailed, human-written behavior ground truth for reliable benchmarking; (2) the scale of real-world applications’ codebases typically exceed the context limits of current models, which cannot be fully processed at once; and (3) the absence of reliable mechanisms to verify whether LLM-generated behavioral claims are faithfully supported by concrete code evidence. Together, these obstacles make benchmarking LLM-based auditing non-trivial, leaving their true capabilities and failure modes opaque. To bridge this gap, we introduce MalEval, an evaluation framework for systematically measuring the reasoning fidelity of LLMs in malware auditing. We pair real-world application codebases with expert-written audit reports to obtain fine-grained, behavior-level ground truth. Large codebases are compressed into unified behavior-relevant program contexts via a context-driven intermediate representation that preserves essential call relations. Both expert reports and model outputs are then mapped, through constrained reasoning, into structured evidence chains linking code-level facts to high-level behaviors in a common, comparable space. Built on this foundation, MalEval decomposes auditing into 4 stage-wise auditing tasks, allowing each intermediate judgment to be independently verified under limited context windows. We leverage MalEval to evaluate seven widely used LLMs and uncover clear capability boundaries: models rely on surface cues over verifiable evidence, struggle to compose dispersed facts into coherent attack chains, and are highly sensitive to context formulation. These findings shift the focus from optimizing isolated outputs to designing LLM and agentic workflows that can reliably support malware auditing.},
+  booktitle = {Proceedings of the 35nd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
+  pages = {To Appear},
+  series = {ISSTA 2026},
+  cate={CCF A Conference},
+  corresponding={true},
+  html={https://conf.researchr.org/details/issta-2026/issta-2026-research-papers/96/Is-Knowing-It-s-Malicious-Enough-Evaluating-LLMs-for-Fine-Grained-Malware-Behavio},
+  pdf={https://arxiv.org/abs/2509.14335},
+  code={https://github.com/ZhengXR930/MalEval}
+}
+
 @inproceedings{he2026retrofit,
   select={true},
   title={Retrofit: Continual Learning with Controlled Forgetting for Binary Security Detection and Analysis},
